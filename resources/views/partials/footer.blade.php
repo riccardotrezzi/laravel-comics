@@ -1,54 +1,56 @@
-<script>
-export default {
-  data() {
-    return {
-    };
-  }
-
-}
-</script>
 
 <footer>
     <div class="link-footer">
         <div class="container row">
             <div class="col-1-3">
-            <div>
-                <h4>DC COMICS</h4>
+              <div>
+                <h4>dc comics</h4>
                 <ul>
-                <li>
-                    <a href="#">Characters</a>
-                </li>
-                <li>
-                    <a href="#">Comics</a>
-                </li>
-                <li>
-                    <a href="#">Movies</a>
-                </li>
-                <li>
-                    <a href="#">TV</a>
-                </li>
-                <li>
-                    <a href="#">Games</a>
-                </li>
-                <li>
-                    <a href="#">Videos</a>
-                </li>
-                <li>
-                    <a href="#">News</a>
-                </li>
+                  @foreach($menuLinkDcComics as $linkComics)
+                    <li>
+                        <h6>
+                          {{ $linkComics['name'] }}
+                        </h6>
+                    </li>
+                  @endforeach
                 </ul>
-            </div>
-            <div>
-                <h4>SHOP</h4>
+              </div>
+              <div>
+                <h4>shop</h4>
                 <ul>
-                <li>
-                    <a href="#">Shop DC</a>
-                </li>
-                <li>
-                    <a href="#">Shop DC Collectibles</a>
-                </li>
+                  @foreach($menuLinkShop as $shop)
+                    <li>
+                        <h6>
+                          {{ $shop['name'] }}
+                        </h6>
+                    </li>
+                  @endforeach
                 </ul>
-            </div>
+              </div>
+              <div>
+                <h4>dc</h4>
+                <ul>
+                  @foreach($menuLinkDc as $dc)
+                    <li>
+                        <h6>
+                          {{ $dc['name'] }}
+                        </h6>
+                    </li>
+                  @endforeach
+                </ul>
+              </div>
+              <div>
+                <h4>sites</h4>
+                <ul>
+                  @foreach($menuLinkSites as $sites)
+                    <li>
+                        <h6>
+                          {{ $sites['name'] }}
+                        </h6>
+                    </li>
+                  @endforeach
+                </ul>
+              </div>
             </div>
         </div>
     </div>
@@ -57,44 +59,3 @@ export default {
     </div>
 </footer>
 
-<style scoped>
-footer{
-  height: 400px;
-  background-image: url();
-}
-
-.link-footer{
-  color:white;
-  display: inline-block;
-  margin-bottom: 40px;
-}
-
-.link-footer div{
-  padding-top: 35px;
-  margin: 0px 0 10px 0;
-}
-
-.link-footer div ul{
-  list-style: none;
-}
-
-.link-footer div h4{
-  margin-bottom: 10px;
-}
-
-.link-footer div ul li{
-  margin-bottom: 2px;
-}
-
-.link-footer div ul li a{
-  text-decoration: none;
-  color: grey;
-  margin: 5px 0;
-}
-
-.sign-footer{
-  height: 100px;
-  background-color: #303030;
-}
-
-</style>
