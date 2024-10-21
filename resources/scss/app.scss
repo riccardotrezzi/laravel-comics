@@ -1,14 +1,16 @@
 @import "~bootstrap/scss/bootstrap";
+@import "./partials/mixins.scss";
+@import "./partials/variables.scss";
 
 main {
     background-color: lightcoral;
 }
 
-.gatto-img {
-    height: 200px;
+li {
+    list-style-type: none;
 }
 
-.gatto-bg {
-    height: 200px;
-    background-size: contain;
+a{
+    text-decoration: none;
+    cursor: pointer;
 }
